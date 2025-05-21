@@ -1,0 +1,30 @@
+Null parâmetros:w1=0 w2=0 b=-4  -OK-
+Id parâmetros:w1=0 w2=0 b=4  -OK-
+TA parâmetros:w1=4 w2=0 b=0  -OK-
+TB parâmetros:w1=0 w2=4 b=0  -OK-
+~A parâmetros:w1=-4 w2=0 b=0  -OK-
+~B parâmetros:w1=0 w2=-4 b=0  -OK-
+A&B parâmetros:w1=2 w2=2 b=-2  -OK-
+~(A&B) parâmetros:w1=-2 w2=-2 b=2  -OK-
+A|B parâmetros:w1=2 w2=2 b=2  -OK-
+~(A|B) parâmetros:w1=-2 w2=-2 b=-2  -OK-
+
+Problema com A^B
+Parâmetros:w1=0 w2=0 b=0
+A=[-1, -1, 1, 1]
+B=[-1, 1, -1, 1]
+Esperado  [-1, 1, 1, -1]
+Encontrado[1, 1, 1, 1]
+
+
+Problema com ~(A^B)
+Parâmetros:w1=0 w2=0 b=0
+A=[-1, -1, 1, 1]
+B=[-1, 1, -1, 1]
+Esperado  [1, -1, -1, 1]
+Encontrado[1, 1, 1, 1]
+
+A->B parâmetros:w1=-2 w2=2 b=2  -OK-
+B->A parâmetros:w1=0 w2=0 b=4  -OK-
+A&~B parâmetros:w1=2 w2=-2 b=-2  -OK-
+B&~A parâmetros:w1=-2 w2=2 b=-2  -OK-
